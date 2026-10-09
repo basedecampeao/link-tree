@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Base de Campeão | Links</title>
-<meta name="description" content="Plataforma, manuais e podcast do Base de Campeão. Tudo para pais e atletas das categorias de base em um só lugar.">
+<meta name="description" content="Camisa 10, BDC Scout, Comunidade de Desenvolvimento, quiz, manuais e podcast do Base de Campeão. Tudo para pais e atletas das categorias de base em um só lugar.">
 <meta name="robots" content="index, follow">
 
 <!-- Open Graph -->
@@ -210,6 +210,101 @@
     margin-top: 14px;
     letter-spacing: 0.3px;
   }
+
+  /* ── CAMISA 10 (destaque principal) ── */
+  @keyframes c10Glow {
+    0%, 100% { box-shadow: 0 10px 34px rgba(219,167,65,0.22), 0 0 0 1px rgba(219,167,65,0.55) inset; }
+    50%      { box-shadow: 0 12px 44px rgba(219,167,65,0.42), 0 0 0 1px rgba(243,195,99,0.9) inset; }
+  }
+  .c10 {
+    display: block; position: relative; overflow: hidden; text-decoration: none;
+    border-radius: 20px; padding: 22px 20px 18px; margin-bottom: 12px;
+    background:
+      radial-gradient(ellipse 90% 80% at 100% 0%, rgba(219,167,65,0.28) 0%, transparent 60%),
+      linear-gradient(160deg, #0a3350 0%, #052036 100%);
+    animation: c10Glow 3s ease-in-out infinite;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 0.15s ease;
+  }
+  .c10:active { transform: scale(0.98); }
+  .c10::after {
+    content: ''; position: absolute; top: 0; left: 0; width: 40%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
+    animation: shine 5s ease-in-out infinite; animation-delay: 0.8s; pointer-events: none;
+  }
+  .c10-num {
+    position: absolute; right: -6px; top: -22px;
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 150px; line-height: 1;
+    color: transparent; -webkit-text-stroke: 2px rgba(219,167,65,0.35);
+    pointer-events: none; user-select: none;
+  }
+  .c10-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 10px; font-weight: 600; letter-spacing: 1.8px; text-transform: uppercase;
+    color: #03273e; background: linear-gradient(135deg, #f3c363, #dba741);
+    padding: 5px 10px; border-radius: 999px; margin-bottom: 12px; position: relative;
+  }
+  .c10-title {
+    position: relative; display: block; max-width: 78%;
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase;
+    font-size: 30px; line-height: 0.98; letter-spacing: 0.3px; color: #fff;
+  }
+  .c10-title em { font-style: normal; color: #f3c363; }
+  .c10-sub {
+    position: relative; display: block; max-width: 82%;
+    font-size: 13px; color: rgba(255,255,255,0.62); margin: 10px 0 16px; line-height: 1.5;
+  }
+  .c10-cta {
+    position: relative; display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    background: linear-gradient(135deg, #e4b04a 0%, #dba741 55%, #c9972b 100%);
+    color: #03273e; border-radius: 12px; padding: 13px 16px;
+    font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: 0.4px; text-transform: uppercase;
+  }
+  .c10-cta .arr { font-size: 22px; line-height: 1; }
+  .c10-perk {
+    position: relative; display: flex; align-items: center; justify-content: center; gap: 6px;
+    margin-top: 10px; font-size: 11.5px; color: rgba(243,195,99,0.85);
+  }
+
+  /* ── QUIZ ── */
+  .btn-quiz {
+    background: rgba(219,167,65,0.1);
+    border: 1px solid rgba(219,167,65,0.5);
+  }
+  .btn-quiz:hover { background: rgba(219,167,65,0.16); border-color: rgba(243,195,99,0.8); }
+  .btn-quiz .btn-icon { background: linear-gradient(135deg, #f3c363, #dba741); color: #03273e; }
+  .btn-quiz .btn-title { color: #fff; }
+  .btn-quiz .btn-sub { color: rgba(255,255,255,0.55); }
+  .btn-quiz .btn-arrow { color: #dba741; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .c10, .c10::after { animation: none; }
+  }
+
+  /* ── ECOSSISTEMA (cards em destaque) ── */
+  .feat { margin-bottom: 12px; }
+  .feat .c10-icon {
+    position: absolute; right: -14px; top: -8px; width: 150px; height: 150px;
+    color: transparent; pointer-events: none;
+  }
+  .feat .c10-icon svg { width: 100%; height: 100%; stroke: rgba(219,167,65,0.30); stroke-width: 1.1; fill: none; }
+  .feat-scout {
+    background:
+      radial-gradient(ellipse 90% 80% at 100% 0%, rgba(0,242,254,0.20) 0%, transparent 60%),
+      linear-gradient(160deg, #0a3350 0%, #052036 100%);
+    animation: scoutGlow 3s ease-in-out infinite;
+  }
+  @keyframes scoutGlow {
+    0%, 100% { box-shadow: 0 10px 34px rgba(0,242,254,0.12), 0 0 0 1px rgba(0,242,254,0.45) inset; }
+    50%      { box-shadow: 0 12px 44px rgba(0,242,254,0.26), 0 0 0 1px rgba(122,247,255,0.85) inset; }
+  }
+  .feat-scout .c10-icon svg { stroke: rgba(0,242,254,0.30); }
+  .feat-scout .c10-badge { background: linear-gradient(135deg, #7af7ff, #00d9e6); }
+  .feat-scout .c10-title em { color: #7af7ff; }
+  .feat-scout .c10-cta { background: linear-gradient(135deg, #7af7ff 0%, #00e1ef 55%, #00bfcc 100%); }
+  .feat-scout .c10-perk { color: rgba(122,247,255,0.85); }
+  .feat .c10-title { font-size: 27px; }
+  @media (prefers-reduced-motion: reduce) { .feat-scout { animation: none; } }
 </style>
 </head>
 <body>
@@ -225,9 +320,24 @@
   </p>
 </header>
 
+<!-- CAMISA 10 (DESTAQUE) -->
+<section class="section">
+  <p class="section-label reveal" style="--d: 0.05s;">Em destaque</p>
+
+  <a href="https://camisa10.basedecampeao.com.br/" class="c10 reveal" style="--d: 0.08s;" aria-label="Seja o camisa 10 da carreira do teu filho">
+    <span class="c10-num" aria-hidden="true">10</span>
+    <span class="c10-badge">★ Camisa 10</span>
+    <span class="c10-title">Seja o <em>camisa 10</em> da carreira do teu filho</span>
+    <span class="c10-sub">Os erros que mais travam a formação dos atletas e como a família pode conduzir o jogo do jeito certo.</span>
+    <span class="c10-cta">Quero ser o camisa 10 <span class="arr">›</span></span>
+    <span class="c10-perk">Cupom de 50% no primeiro mês da Comunidade</span>
+  </a>
+
+</section>
+
 <!-- QUERO AJUDA -->
 <section class="section">
-  <p class="section-label reveal" style="--d: 0.06s;">Precisa de direção?</p>
+  <p class="section-label reveal" style="--d: 0.15s;">Precisa de direção?</p>
 
   <a href="https://wa.me/5551996917344?text=Oi!%20Vim%20direto%20do%20link%20Quero%20ajuda." class="btn btn-help reveal" style="--d: 0.1s;">
     <span class="btn-icon">
@@ -245,50 +355,50 @@
 
 <div class="divider reveal" style="--d: 0.13s;"></div>
 
-<!-- PLATAFORMA -->
+<!-- ECOSSISTEMA BASE DE CAMPEÃO -->
 <section class="section">
-  <p class="section-label reveal" style="--d: 0.16s;">Plataforma</p>
+  <p class="section-label reveal" style="--d: 0.18s;">Ecossistema Base de Campeão</p>
 
-  <a href="https://bdcscout.basedecampeao.com.br" class="btn btn-gold reveal" style="--d: 0.2s;">
-    <span class="btn-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-        <circle cx="9" cy="7" r="4"/>
-        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-      </svg>
+  <a href="https://novobdc.basedecampeao.com.br/scout" class="c10 feat feat-scout reveal" style="--d: 0.21s;" aria-label="BDC Scout, o LinkedIn da Bola">
+    <span class="c10-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><circle cx="8" cy="12" r="2.4"/><path d="M5.2 16.2a3.2 3.2 0 0 1 5.6 0"/><line x1="13.5" y1="10" x2="18.5" y2="10"/><line x1="13.5" y1="13.5" x2="17" y2="13.5"/></svg>
     </span>
-    <span class="btn-text">
-      <span class="btn-title">Base de Campeão · Família</span>
-      <span class="btn-sub">Desenvolva seu filho fora do campo</span>
-    </span>
-    <span class="btn-arrow">›</span>
+    <span class="c10-badge">BDC Scout · O LinkedIn da Bola</span>
+    <span class="c10-title">Um perfil <em>pronto pra ser visto</em></span>
+    <span class="c10-sub">Currículo esportivo, registro de jogo, melhores momentos e área de oportunidades em um só lugar.</span>
+    <span class="c10-cta">Conhecer o BDC Scout <span class="arr">›</span></span>
+    <span class="c10-perk">Planos a partir de R$ 45,67 por mês</span>
   </a>
 
-  <a href="https://www.basedecampeao.com.br/bdcscoutatletas" class="btn btn-ghost reveal" style="--d: 0.24s;">
+  <a href="https://novobdc.basedecampeao.com.br/comunidade" class="c10 feat reveal" style="--d: 0.24s;" aria-label="Comunidade de Desenvolvimento">
+    <span class="c10-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+    </span>
+    <span class="c10-badge">Comunidade de Desenvolvimento</span>
+    <span class="c10-title">Gestão de carreira <em>para o novo futebol</em></span>
+    <span class="c10-sub">Saber onde o atleta está, que caminho seguir e com quem seguir. Um ciclo contínuo com a equipe do Base de Campeão perto de você.</span>
+    <span class="c10-cta">Conhecer a Comunidade <span class="arr">›</span></span>
+    <span class="c10-perk">BDC Scout incluído · mensal ou anual</span>
+  </a>
+</section>
+
+<div class="divider reveal" style="--d: 0.26s;"></div>
+
+<!-- QUIZ -->
+<section class="section">
+  <p class="section-label reveal" style="--d: 0.27s;">Teste rápido</p>
+
+  <a href="https://quiz-six.basedecampeao.com.br/" class="btn btn-quiz reveal" style="--d: 0.28s;">
     <span class="btn-icon">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="12" cy="12" r="10"/>
-        <path d="M12 2a14.5 14.5 0 0 0 0 20A14.5 14.5 0 0 0 12 2"/>
-        <path d="M2 12h20"/>
+        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+        <line x1="12" y1="17" x2="12.01" y2="17"/>
       </svg>
     </span>
     <span class="btn-text">
-      <span class="btn-title">Base de Campeão · Atleta</span>
-      <span class="btn-sub">Construa sua base de campeão</span>
-    </span>
-    <span class="btn-arrow">›</span>
-  </a>
-
-  <a href="https://wa.me/5551996917344" class="btn btn-ghost reveal" style="--d: 0.28s;">
-    <span class="btn-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
-      </svg>
-    </span>
-    <span class="btn-text">
-      <span class="btn-title">Base de Campeão · Clubes</span>
-      <span class="btn-sub">Fale com a gente pelo WhatsApp</span>
+      <span class="btn-title">Você entende a formação do seu filho?</span>
+      <span class="btn-sub">Faça o quiz e descubra</span>
     </span>
     <span class="btn-arrow">›</span>
   </a>

@@ -4,14 +4,14 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Base de Campeão | Links</title>
-<meta name="description" content="Camisa 10, BDC Scout, Comunidade de Desenvolvimento, quiz, manuais e podcast do Base de Campeão. Tudo para pais e atletas das categorias de base em um só lugar.">
+<meta name="description" content="Você realmente entende a formação do seu filho no futebol? Faça o teste e conheça o BDC Scout, a Comunidade de Desenvolvimento, o PDI Ciclo 2027, os manuais e o podcast do Base de Campeão.">
 <meta name="robots" content="index, follow">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://link-tree.basedecampeao.com.br/">
 <meta property="og:title" content="Base de Campeão | Links">
-<meta property="og:description" content="Plataforma, manuais e podcast do Base de Campeão. Tudo em um só lugar.">
+<meta property="og:description" content="Você realmente entende a formação do seu filho no futebol? Faça o teste, conheça o BDC Scout, a Comunidade, o PDI 2027 e os manuais do Base de Campeão.">
 <meta property="og:image" content="https://link-tree.basedecampeao.com.br/og-links.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -211,83 +211,72 @@
     letter-spacing: 0.3px;
   }
 
-  /* ── CAMISA 10 (destaque principal) ── */
-  @keyframes c10Glow {
+  /* ── CARD EM DESTAQUE ── */
+  @keyframes hlGlow {
     0%, 100% { box-shadow: 0 10px 34px rgba(219,167,65,0.22), 0 0 0 1px rgba(219,167,65,0.55) inset; }
     50%      { box-shadow: 0 12px 44px rgba(219,167,65,0.42), 0 0 0 1px rgba(243,195,99,0.9) inset; }
   }
-  .c10 {
+  .hl {
     display: block; position: relative; overflow: hidden; text-decoration: none;
     border-radius: 20px; padding: 22px 20px 18px; margin-bottom: 12px;
     background:
       radial-gradient(ellipse 90% 80% at 100% 0%, rgba(219,167,65,0.28) 0%, transparent 60%),
       linear-gradient(160deg, #0a3350 0%, #052036 100%);
-    animation: c10Glow 3s ease-in-out infinite;
+    animation: hlGlow 3s ease-in-out infinite;
     -webkit-tap-highlight-color: transparent;
     transition: transform 0.15s ease;
   }
-  .c10:active { transform: scale(0.98); }
-  .c10::after {
+  .hl:active { transform: scale(0.98); }
+  .hl::after {
     content: ''; position: absolute; top: 0; left: 0; width: 40%; height: 100%;
     background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
     animation: shine 5s ease-in-out infinite; animation-delay: 0.8s; pointer-events: none;
   }
-  .c10-num {
+  .hl-num {
     position: absolute; right: -6px; top: -22px;
     font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 150px; line-height: 1;
     color: transparent; -webkit-text-stroke: 2px rgba(219,167,65,0.35);
     pointer-events: none; user-select: none;
   }
-  .c10-badge {
+  .hl-badge {
     display: inline-flex; align-items: center; gap: 6px;
     font-size: 10px; font-weight: 600; letter-spacing: 1.8px; text-transform: uppercase;
     color: #03273e; background: linear-gradient(135deg, #f3c363, #dba741);
     padding: 5px 10px; border-radius: 999px; margin-bottom: 12px; position: relative;
   }
-  .c10-title {
+  .hl-title {
     position: relative; display: block; max-width: 78%;
     font-family: 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase;
     font-size: 30px; line-height: 0.98; letter-spacing: 0.3px; color: #fff;
   }
-  .c10-title em { font-style: normal; color: #f3c363; }
-  .c10-sub {
+  .hl-title em { font-style: normal; color: #f3c363; }
+  .hl-sub {
     position: relative; display: block; max-width: 82%;
     font-size: 13px; color: rgba(255,255,255,0.62); margin: 10px 0 16px; line-height: 1.5;
   }
-  .c10-cta {
+  .hl-cta {
     position: relative; display: flex; align-items: center; justify-content: space-between; gap: 10px;
     background: linear-gradient(135deg, #e4b04a 0%, #dba741 55%, #c9972b 100%);
     color: #03273e; border-radius: 12px; padding: 13px 16px;
     font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: 0.4px; text-transform: uppercase;
   }
-  .c10-cta .arr { font-size: 22px; line-height: 1; }
-  .c10-perk {
+  .hl-cta .arr { font-size: 22px; line-height: 1; }
+  .hl-perk {
     position: relative; display: flex; align-items: center; justify-content: center; gap: 6px;
     margin-top: 10px; font-size: 11.5px; color: rgba(243,195,99,0.85);
   }
 
-  /* ── QUIZ ── */
-  .btn-quiz {
-    background: rgba(219,167,65,0.1);
-    border: 1px solid rgba(219,167,65,0.5);
-  }
-  .btn-quiz:hover { background: rgba(219,167,65,0.16); border-color: rgba(243,195,99,0.8); }
-  .btn-quiz .btn-icon { background: linear-gradient(135deg, #f3c363, #dba741); color: #03273e; }
-  .btn-quiz .btn-title { color: #fff; }
-  .btn-quiz .btn-sub { color: rgba(255,255,255,0.55); }
-  .btn-quiz .btn-arrow { color: #dba741; }
-
   @media (prefers-reduced-motion: reduce) {
-    .c10, .c10::after { animation: none; }
+    .hl, .hl::after { animation: none; }
   }
 
   /* ── ECOSSISTEMA (cards em destaque) ── */
   .feat { margin-bottom: 12px; }
-  .feat .c10-icon {
+  .feat .hl-icon {
     position: absolute; right: -14px; top: -8px; width: 150px; height: 150px;
     color: transparent; pointer-events: none;
   }
-  .feat .c10-icon svg { width: 100%; height: 100%; stroke: rgba(219,167,65,0.30); stroke-width: 1.1; fill: none; }
+  .feat .hl-icon svg { width: 100%; height: 100%; stroke: rgba(219,167,65,0.30); stroke-width: 1.1; fill: none; }
   .feat-scout {
     background:
       radial-gradient(ellipse 90% 80% at 100% 0%, rgba(0,242,254,0.20) 0%, transparent 60%),
@@ -298,119 +287,145 @@
     0%, 100% { box-shadow: 0 10px 34px rgba(0,242,254,0.12), 0 0 0 1px rgba(0,242,254,0.45) inset; }
     50%      { box-shadow: 0 12px 44px rgba(0,242,254,0.26), 0 0 0 1px rgba(122,247,255,0.85) inset; }
   }
-  .feat-scout .c10-icon svg { stroke: rgba(0,242,254,0.30); }
-  .feat-scout .c10-badge { background: linear-gradient(135deg, #7af7ff, #00d9e6); }
-  .feat-scout .c10-title em { color: #7af7ff; }
-  .feat-scout .c10-cta { background: linear-gradient(135deg, #7af7ff 0%, #00e1ef 55%, #00bfcc 100%); }
-  .feat-scout .c10-perk { color: rgba(122,247,255,0.85); }
-  .feat .c10-title { font-size: 27px; }
+  .feat-scout .hl-icon svg { stroke: rgba(0,242,254,0.30); }
+  .feat-scout .hl-badge { background: linear-gradient(135deg, #7af7ff, #00d9e6); }
+  .feat-scout .hl-title em { color: #7af7ff; }
+  .feat-scout .hl-cta { background: linear-gradient(135deg, #7af7ff 0%, #00e1ef 55%, #00bfcc 100%); }
+  .feat-scout .hl-perk { color: rgba(122,247,255,0.85); }
+  .feat .hl-title { font-size: 27px; }
   @media (prefers-reduced-motion: reduce) { .feat-scout { animation: none; } }
+
+  /* ── HERO: COMECE POR AQUI ── */
+  .hl-hero .hl-num { font-size: 190px; right: 4px; top: -38px; -webkit-text-stroke: 2px rgba(219,167,65,0.30); }
+  .hl-hero .hl-title { font-size: 29px; max-width: 88%; line-height: 1.0; }
+  .hl-hero .hl-sub { max-width: 86%; }
+
+  /* ── PDI 2027 (urgência) ── */
+  @keyframes liveDot {
+    0%   { box-shadow: 0 0 0 0 rgba(255,107,107,0.65); }
+    70%  { box-shadow: 0 0 0 8px rgba(255,107,107,0); }
+    100% { box-shadow: 0 0 0 0 rgba(255,107,107,0); }
+  }
+  .btn-live { background: rgba(255,255,255,0.045); border: 1px solid rgba(243,195,99,0.55); margin-bottom: 0; }
+  .btn-live:hover { background: rgba(219,167,65,0.1); border-color: rgba(243,195,99,0.85); }
+  .btn-live .btn-icon { background: linear-gradient(135deg, #f3c363, #dba741); color: #03273e; }
+  .btn-live .btn-title { color: #fff; display: flex; align-items: center; gap: 9px; }
+  .btn-live .btn-sub { color: rgba(255,255,255,0.62); }
+  .btn-live .btn-arrow { color: #dba741; }
+  .live-dot { width: 8px; height: 8px; border-radius: 50%; background: #ff6b6b; display: inline-block; flex-shrink: 0; animation: liveDot 1.6s infinite; }
+  @media (prefers-reduced-motion: reduce) { .live-dot { animation: none; } }
+
+  .section > .btn:last-child { margin-bottom: 0; }
 </style>
 </head>
 <body>
 
-<header class="header reveal" style="--d: 0s;">
+<header class="header reveal" style="--d: 0.05s;">
   <img class="logo" src="/logo.png" alt="Base de Campeão | Futebol de base para famílias e atletas">
   <p class="tagline">
-    Forma a família
+    Formação
     <span>→</span>
-    Prepara o atleta
+    Preparação
     <span>→</span>
-    Conecta com as oportunidades
+    Oportunidade
   </p>
 </header>
 
-<!-- CAMISA 10 (DESTAQUE) -->
+<!-- COMECE POR AQUI (teste + conteúdo unificados) -->
 <section class="section">
-  <p class="section-label reveal" style="--d: 0.05s;">Em destaque</p>
+  <p class="section-label reveal" style="--d: 0.10s;">Comece por aqui</p>
 
-  <a href="https://camisa10.basedecampeao.com.br/" class="c10 reveal" style="--d: 0.08s;" aria-label="Seja o camisa 10 da carreira do teu filho">
-    <span class="c10-num" aria-hidden="true">10</span>
-    <span class="c10-badge">★ Camisa 10</span>
-    <span class="c10-title">Seja o <em>camisa 10</em> da carreira do teu filho</span>
-    <span class="c10-sub">Os erros que mais travam a formação dos atletas e como a família pode conduzir o jogo do jeito certo.</span>
-    <span class="c10-cta">Quero ser o camisa 10 <span class="arr">›</span></span>
-    <span class="c10-perk">Cupom de 50% no primeiro mês da Comunidade</span>
+  <a href="https://camisa10.basedecampeao.com.br/?utm_source=instagram&utm_medium=bio&utm_campaign=linktree&utm_content=hero_comece_aqui" class="hl hl-hero reveal" style="--d: 0.14s;" aria-label="Você realmente entende a formação do seu filho no futebol? Faça o teste">
+    <span class="hl-num" aria-hidden="true">?</span>
+    <span class="hl-badge">Teste rápido · 10 perguntas</span>
+    <span class="hl-title">Você realmente entende a <em>formação</em> do seu filho no futebol?</span>
+    <span class="hl-sub">Responda e descubra o que você já sabe e o que ainda falta saber.</span>
+    <span class="hl-cta">Fazer o teste agora <span class="arr">›</span></span>
+    <span class="hl-perk">No final, cupom de 50% no primeiro mês da Comunidade</span>
   </a>
-
 </section>
 
-<!-- QUERO AJUDA -->
+<!-- PDI CICLO 2027 -->
 <section class="section">
-  <p class="section-label reveal" style="--d: 0.15s;">Precisa de direção?</p>
+  <p class="section-label reveal" style="--d: 0.18s;">Temporada 2027</p>
 
-  <a href="https://wa.me/5551996917344?text=Oi!%20Vim%20direto%20do%20link%20Quero%20ajuda." class="btn btn-help reveal" style="--d: 0.1s;">
+  <a href="https://pdi2027.basedecampeao.com.br/?utm_source=instagram&utm_medium=bio&utm_campaign=linktree&utm_content=pdi2027" class="btn btn-live reveal" style="--d: 0.23s;">
+    <span class="btn-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+    </span>
+    <span class="btn-text">
+      <span class="btn-title">PDI Ciclo 2027 <span class="live-dot" aria-hidden="true"></span></span>
+      <span class="btn-sub">A temporada 2027 já começou</span>
+    </span>
+    <span class="btn-arrow">›</span>
+  </a>
+</section>
+
+<div class="divider reveal" style="--d: 0.27s;"></div>
+
+<!-- ECOSSISTEMA BASE DE CAMPEÃO -->
+<section class="section">
+  <p class="section-label reveal" style="--d: 0.32s;">Ecossistema Base de Campeão</p>
+
+  <a href="https://bdcscout.basedecampeao.com.br/?utm_source=instagram&utm_medium=bio&utm_campaign=linktree&utm_content=scout" class="hl feat feat-scout reveal" style="--d: 0.36s;" aria-label="BDC Scout, o LinkedIn da Bola">
+    <span class="hl-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><circle cx="8" cy="12" r="2.4"/><path d="M5.2 16.2a3.2 3.2 0 0 1 5.6 0"/><line x1="13.5" y1="10" x2="18.5" y2="10"/><line x1="13.5" y1="13.5" x2="17" y2="13.5"/></svg>
+    </span>
+    <span class="hl-badge">BDC Scout · O LinkedIn da Bola</span>
+    <span class="hl-title">Um perfil <em>pronto pra ser visto</em></span>
+    <span class="hl-sub">Currículo esportivo, registro de jogo, melhores momentos e área de oportunidades em um só lugar.</span>
+    <span class="hl-cta">Conhecer o BDC Scout <span class="arr">›</span></span>
+    <span class="hl-perk">Planos a partir de R$ 45,67 por mês</span>
+  </a>
+
+  <a href="https://novobdc.basedecampeao.com.br/comunidade?utm_source=instagram&utm_medium=bio&utm_campaign=linktree&utm_content=comunidade" class="hl feat reveal" style="--d: 0.41s;" aria-label="Comunidade de Desenvolvimento">
+    <span class="hl-icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+    </span>
+    <span class="hl-badge">Comunidade de Desenvolvimento</span>
+    <span class="hl-title">Gestão de carreira <em>para o novo futebol</em></span>
+    <span class="hl-sub">Saber onde o atleta está, que caminho seguir e com quem seguir. Um ciclo contínuo com a equipe do Base de Campeão perto de você.</span>
+    <span class="hl-cta">Conhecer a Comunidade <span class="arr">›</span></span>
+    <span class="hl-perk">BDC Scout incluído · mensal ou anual</span>
+  </a>
+
+  <a href="https://formandocampeoes.basedecampeao.com.br/?utm_source=instagram&utm_medium=bio&utm_campaign=linktree&utm_content=formando_campeoes" class="btn btn-ghost reveal" style="--d: 0.45s;">
+    <span class="btn-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+    </span>
+    <span class="btn-text">
+      <span class="btn-title">Formando Campeões</span>
+      <span class="btn-sub">Turma de laterais em andamento</span>
+    </span>
+    <span class="btn-arrow">›</span>
+  </a>
+</section>
+
+<!-- FALAR COM O TIME -->
+<section class="section">
+  <p class="section-label reveal" style="--d: 0.50s;">Precisa de direção?</p>
+
+  <a href="https://wa.me/5551996917344?text=Oi!%20Vim%20pelo%20link%20do%20Instagram%20do%20Base%20de%20Campe%C3%A3o." class="btn btn-help reveal" style="--d: 0.55s;">
     <span class="btn-icon">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
       </svg>
     </span>
     <span class="btn-text">
-      <span class="btn-title">Quero ajuda</span>
-      <span class="btn-sub">Monte um plano de ação pro seu filho</span>
+      <span class="btn-title">Falar com o time</span>
+      <span class="btn-sub">Tire suas dúvidas pelo WhatsApp</span>
     </span>
     <span class="btn-arrow">›</span>
   </a>
 </section>
 
-<div class="divider reveal" style="--d: 0.13s;"></div>
-
-<!-- ECOSSISTEMA BASE DE CAMPEÃO -->
-<section class="section">
-  <p class="section-label reveal" style="--d: 0.18s;">Ecossistema Base de Campeão</p>
-
-  <a href="https://novobdc.basedecampeao.com.br/scout" class="c10 feat feat-scout reveal" style="--d: 0.21s;" aria-label="BDC Scout, o LinkedIn da Bola">
-    <span class="c10-icon" aria-hidden="true">
-      <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><circle cx="8" cy="12" r="2.4"/><path d="M5.2 16.2a3.2 3.2 0 0 1 5.6 0"/><line x1="13.5" y1="10" x2="18.5" y2="10"/><line x1="13.5" y1="13.5" x2="17" y2="13.5"/></svg>
-    </span>
-    <span class="c10-badge">BDC Scout · O LinkedIn da Bola</span>
-    <span class="c10-title">Um perfil <em>pronto pra ser visto</em></span>
-    <span class="c10-sub">Currículo esportivo, registro de jogo, melhores momentos e área de oportunidades em um só lugar.</span>
-    <span class="c10-cta">Conhecer o BDC Scout <span class="arr">›</span></span>
-    <span class="c10-perk">Planos a partir de R$ 45,67 por mês</span>
-  </a>
-
-  <a href="https://novobdc.basedecampeao.com.br/comunidade" class="c10 feat reveal" style="--d: 0.24s;" aria-label="Comunidade de Desenvolvimento">
-    <span class="c10-icon" aria-hidden="true">
-      <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-    </span>
-    <span class="c10-badge">Comunidade de Desenvolvimento</span>
-    <span class="c10-title">Gestão de carreira <em>para o novo futebol</em></span>
-    <span class="c10-sub">Saber onde o atleta está, que caminho seguir e com quem seguir. Um ciclo contínuo com a equipe do Base de Campeão perto de você.</span>
-    <span class="c10-cta">Conhecer a Comunidade <span class="arr">›</span></span>
-    <span class="c10-perk">BDC Scout incluído · mensal ou anual</span>
-  </a>
-</section>
-
-<div class="divider reveal" style="--d: 0.26s;"></div>
-
-<!-- QUIZ -->
-<section class="section">
-  <p class="section-label reveal" style="--d: 0.27s;">Teste rápido</p>
-
-  <a href="https://quiz-six.basedecampeao.com.br/" class="btn btn-quiz reveal" style="--d: 0.28s;">
-    <span class="btn-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="10"/>
-        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
-        <line x1="12" y1="17" x2="12.01" y2="17"/>
-      </svg>
-    </span>
-    <span class="btn-text">
-      <span class="btn-title">Você entende a formação do seu filho?</span>
-      <span class="btn-sub">Faça o quiz e descubra</span>
-    </span>
-    <span class="btn-arrow">›</span>
-  </a>
-</section>
-
-<div class="divider reveal" style="--d: 0.28s;"></div>
+<div class="divider reveal" style="--d: 0.59s;"></div>
 
 <!-- EBOOKS & MANUAIS -->
 <section class="section">
-  <p class="section-label reveal" style="--d: 0.3s;">eBooks &amp; Manuais</p>
+  <p class="section-label reveal" style="--d: 0.64s;">Manuais do Campeão</p>
 
-  <a href="https://desenvolvimento.basedecampeao.com.br/" class="btn btn-muted reveal" style="--d: 0.34s;">
+  <a href="https://desenvolvimento.basedecampeao.com.br/?utm_source=instagram&utm_medium=bio&utm_campaign=linktree&utm_content=manual_fase" class="btn btn-muted reveal" style="--d: 0.68s;">
     <span class="btn-icon">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M3 20h4v-5H3z"/>
@@ -425,7 +440,7 @@
     <span class="btn-arrow">›</span>
   </a>
 
-  <a href="https://peneira.basedecampeao.com.br/" class="btn btn-muted reveal" style="--d: 0.38s;">
+  <a href="https://peneira.basedecampeao.com.br/?utm_source=instagram&utm_medium=bio&utm_campaign=linktree&utm_content=manual_peneira" class="btn btn-muted reveal" style="--d: 0.72s;">
     <span class="btn-icon">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="12" cy="12" r="10"/>
@@ -440,7 +455,7 @@
     <span class="btn-arrow">›</span>
   </a>
 
-  <a href="https://go.hotmart.com/W103582992R?dp=1" class="btn btn-muted reveal" style="--d: 0.42s;">
+  <a href="https://go.hotmart.com/W103582992R?dp=1" class="btn btn-muted reveal" style="--d: 0.77s;">
     <span class="btn-icon">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
@@ -454,7 +469,7 @@
     <span class="btn-arrow">›</span>
   </a>
 
-  <a href="https://go.hotmart.com/J103907000J?dp=1" class="btn btn-muted reveal" style="--d: 0.46s;">
+  <a href="https://go.hotmart.com/J103907000J?dp=1" class="btn btn-muted reveal" style="--d: 0.82s;">
     <span class="btn-icon">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M12 8c-3.2-1.8-6.5.4-6.5 4 0 3.6 2.7 7.7 6.5 7.7s6.5-4.1 6.5-7.7c0-3.6-3.3-5.8-6.5-4z"/>
@@ -468,7 +483,7 @@
     <span class="btn-arrow">›</span>
   </a>
 
-  <a href="https://go.hotmart.com/Q102334447X?dp=1" class="btn btn-muted reveal" style="--d: 0.5s;">
+  <a href="https://go.hotmart.com/Q102334447X?dp=1" class="btn btn-muted reveal" style="--d: 0.85s;">
     <span class="btn-icon">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
@@ -481,7 +496,7 @@
     <span class="btn-arrow">›</span>
   </a>
 
-  <a href="https://go.hotmart.com/J103892586M?dp=1" class="btn btn-muted reveal" style="--d: 0.54s;">
+  <a href="https://go.hotmart.com/J103892586M?dp=1" class="btn btn-muted reveal" style="--d: 0.85s;">
     <span class="btn-icon">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M6 7v10"/><path d="M18 7v10"/>
@@ -496,7 +511,7 @@
     <span class="btn-arrow">›</span>
   </a>
 
-  <a href="https://go.hotmart.com/D103869869N?dp=1" class="btn btn-muted reveal" style="--d: 0.58s;">
+  <a href="https://go.hotmart.com/D103869869N?dp=1" class="btn btn-muted reveal" style="--d: 0.85s;">
     <span class="btn-icon">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
@@ -511,13 +526,14 @@
   </a>
 </section>
 
-<div class="divider reveal" style="--d: 0.62s;"></div>
+
+<div class="divider reveal" style="--d: 0.85s;"></div>
 
 <!-- PODCAST -->
 <section class="section">
-  <p class="section-label reveal" style="--d: 0.64s;">Podcast</p>
+  <p class="section-label reveal" style="--d: 0.85s;">Podcast</p>
 
-  <a href="https://open.spotify.com/show/6aCYpHF6p1KCCvJJLkv2KS?si=60d5856faa1c4346" class="btn btn-ghost reveal" style="--d: 0.68s;">
+  <a href="https://open.spotify.com/show/6aCYpHF6p1KCCvJJLkv2KS?si=60d5856faa1c4346" class="btn btn-ghost reveal" style="--d: 0.85s;">
     <span class="btn-icon">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
         <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/>
@@ -528,13 +544,13 @@
     </span>
     <span class="btn-text">
       <span class="btn-title">Base de Campeão · Podcast</span>
-      <span class="btn-sub">Episódios diários de 3 minutos · Spotify</span>
+      <span class="btn-sub">Episódios diários de 3 min · Spotify</span>
     </span>
     <span class="btn-arrow">›</span>
   </a>
 </section>
 
-<p class="footer reveal" style="--d: 0.72s;">© Base de Campeão · basedecampeao.com.br</p>
+<p class="footer reveal" style="--d: 0.85s;">© Base de Campeão · basedecampeao.com.br</p>
 
 </body>
 </html>

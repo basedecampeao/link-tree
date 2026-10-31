@@ -316,6 +316,24 @@
   @media (prefers-reduced-motion: reduce) { .live-dot { animation: none; } }
 
   .section > .btn:last-child { margin-bottom: 0; }
+
+  /* ── TODOS OS BOTÕES NO ESTILO DE DESTAQUE ── */
+  .hl-sm { padding: 18px 18px 16px; animation: none; box-shadow: 0 8px 26px rgba(0,0,0,0.25), 0 0 0 1px rgba(219,167,65,0.38) inset; }
+  .hl-sm::after { animation: none; display: none; }
+  .hl-sm .hl-title, .feat.hl-sm .hl-title { font-size: 24px; }
+  .hl-sm .hl-sub { margin: 8px 0 12px; font-size: 12.5px; }
+  .hl-sm .hl-cta { padding: 11px 14px; font-size: 16px; }
+  .hl-sm .hl-icon { width: 108px; height: 108px; top: -2px; right: -8px; }
+  .hl-badge .live-dot { width: 7px; height: 7px; background: #e5484d; }
+  .feat-help { background: radial-gradient(ellipse 90% 80% at 100% 0%, rgba(37,211,102,0.22) 0%, transparent 60%), linear-gradient(160deg, #0a3350 0%, #052036 100%); box-shadow: 0 8px 26px rgba(0,0,0,0.25), 0 0 0 1px rgba(37,211,102,0.5) inset; }
+  .feat-help .hl-icon svg { stroke: rgba(37,211,102,0.32); }
+  .feat-help .hl-badge { background: linear-gradient(135deg, #6ef0a3, #25d366); color: #063d1f; }
+  .feat-help .hl-title em { color: #6ef0a3; }
+  .feat-help .hl-cta { background: linear-gradient(135deg, #2bd171 0%, #25d366 55%, #1eb958 100%); color: #063d1f; }
+  .section:last-of-type .hl:last-child { margin-bottom: 0; }
+  .hl-cta { white-space: nowrap; }
+  @media (max-width: 380px) { .hl-cta { font-size: 15px; padding: 12px 13px; } .hl-sm .hl-cta { font-size: 15px; } }
+  @media (max-width: 340px) { .hl-cta { font-size: 13.5px; letter-spacing: 0.2px; } .hl-title { font-size: 25px; } .hl-hero .hl-title { font-size: 25px; } }
 </style>
 </head>
 <body>
@@ -335,7 +353,7 @@
 <section class="section">
   <p class="section-label reveal" style="--d: 0.10s;">Comece por aqui</p>
 
-  <a href="https://camisa10.basedecampeao.com.br/?utm_source=instagram&utm_medium=bio&utm_campaign=linktree&utm_content=hero_comece_aqui" class="hl hl-hero reveal" style="--d: 0.14s;" aria-label="Você realmente entende a formação do seu filho no futebol? Faça o teste">
+  <a href="https://camisa10.basedecampeao.com.br/?utm_source=instagram&utm_medium=bio&utm_campaign=linktree&utm_content=hero_comece_aqui" class="hl hl-hero reveal" style="--d: 0.15s;" aria-label="Você realmente entende a formação do seu filho no futebol? Faça o teste">
     <span class="hl-num" aria-hidden="true">?</span>
     <span class="hl-badge">Teste rápido · 10 perguntas</span>
     <span class="hl-title">Você realmente entende a <em>formação</em> do seu filho no futebol?</span>
@@ -345,32 +363,26 @@
   </a>
 </section>
 
-<!-- PDI CICLO 2027 -->
 <section class="section">
-  <p class="section-label reveal" style="--d: 0.18s;">Temporada 2027</p>
+  <p class="section-label reveal" style="--d: 0.20s;">Temporada 2027</p>
 
-  <a href="https://pdi2027.basedecampeao.com.br/?utm_source=instagram&utm_medium=bio&utm_campaign=linktree&utm_content=pdi2027" class="btn btn-live reveal" style="--d: 0.23s;">
-    <span class="btn-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
-    </span>
-    <span class="btn-text">
-      <span class="btn-title">PDI Ciclo 2027 <span class="live-dot" aria-hidden="true"></span></span>
-      <span class="btn-sub">A temporada 2027 já começou</span>
-    </span>
-    <span class="btn-arrow">›</span>
+  <a href="https://pdi2027.basedecampeao.com.br/?utm_source=instagram&utm_medium=bio&utm_campaign=linktree&utm_content=pdi2027" class="hl feat feat-pdi reveal" style="--d: 0.25s;">
+    <span class="hl-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg></span>
+    <span class="hl-badge"><span class="live-dot" aria-hidden="true"></span> Janela aberta agora</span>
+    <span class="hl-title">A temporada 2027 <em>já começou</em></span>
+    <span class="hl-sub">Clubes estão montando os elencos agora. Prepare o atleta antes da virada.</span>
+    <span class="hl-cta">Quero me preparar <span class="arr">›</span></span>
+    <span class="hl-perk">PDI Ciclo 2027 · atletas 14+ · vagas limitadas</span>
   </a>
 </section>
 
-<div class="divider reveal" style="--d: 0.27s;"></div>
+<div class="divider reveal" style="--d: 0.30s;"></div>
 
-<!-- ECOSSISTEMA BASE DE CAMPEÃO -->
 <section class="section">
-  <p class="section-label reveal" style="--d: 0.32s;">Ecossistema Base de Campeão</p>
+  <p class="section-label reveal" style="--d: 0.35s;">Ecossistema Base de Campeão</p>
 
-  <a href="https://bdcscout.basedecampeao.com.br/?utm_source=instagram&utm_medium=bio&utm_campaign=linktree&utm_content=scout" class="hl feat feat-scout reveal" style="--d: 0.36s;" aria-label="BDC Scout, o LinkedIn da Bola">
-    <span class="hl-icon" aria-hidden="true">
-      <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><circle cx="8" cy="12" r="2.4"/><path d="M5.2 16.2a3.2 3.2 0 0 1 5.6 0"/><line x1="13.5" y1="10" x2="18.5" y2="10"/><line x1="13.5" y1="13.5" x2="17" y2="13.5"/></svg>
-    </span>
+  <a href="https://bdcscout.basedecampeao.com.br/?utm_source=instagram&utm_medium=bio&utm_campaign=linktree&utm_content=scout" class="hl feat feat-scout reveal" style="--d: 0.40s;" aria-label="BDC Scout, o LinkedIn da Bola">
+    <span class="hl-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><circle cx="8" cy="12" r="2.4"/><path d="M5.2 16.2a3.2 3.2 0 0 1 5.6 0"/><line x1="13.5" y1="10" x2="18.5" y2="10"/><line x1="13.5" y1="13.5" x2="17" y2="13.5"/></svg></span>
     <span class="hl-badge">BDC Scout · O LinkedIn da Bola</span>
     <span class="hl-title">Um perfil <em>pronto pra ser visto</em></span>
     <span class="hl-sub">Currículo esportivo, registro de jogo, melhores momentos e área de oportunidades em um só lugar.</span>
@@ -378,10 +390,8 @@
     <span class="hl-perk">Planos a partir de R$ 45,67 por mês</span>
   </a>
 
-  <a href="https://novobdc.basedecampeao.com.br/comunidade?utm_source=instagram&utm_medium=bio&utm_campaign=linktree&utm_content=comunidade" class="hl feat reveal" style="--d: 0.41s;" aria-label="Comunidade de Desenvolvimento">
-    <span class="hl-icon" aria-hidden="true">
-      <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-    </span>
+  <a href="https://novobdc.basedecampeao.com.br/comunidade?utm_source=instagram&utm_medium=bio&utm_campaign=linktree&utm_content=comunidade" class="hl feat  reveal" style="--d: 0.45s;" aria-label="Comunidade de Desenvolvimento">
+    <span class="hl-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
     <span class="hl-badge">Comunidade de Desenvolvimento</span>
     <span class="hl-title">Gestão de carreira <em>para o novo futebol</em></span>
     <span class="hl-sub">Saber onde o atleta está, que caminho seguir e com quem seguir. Um ciclo contínuo com a equipe do Base de Campeão perto de você.</span>
@@ -389,168 +399,53 @@
     <span class="hl-perk">BDC Scout incluído · mensal ou anual</span>
   </a>
 
-  <a href="https://formandocampeoes.basedecampeao.com.br/?utm_source=instagram&utm_medium=bio&utm_campaign=linktree&utm_content=formando_campeoes" class="btn btn-ghost reveal" style="--d: 0.45s;">
-    <span class="btn-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-    </span>
-    <span class="btn-text">
-      <span class="btn-title">Formando Campeões</span>
-      <span class="btn-sub">Turma de laterais em andamento</span>
-    </span>
-    <span class="btn-arrow">›</span>
+  <a href="https://formandocampeoes.basedecampeao.com.br/?utm_source=instagram&utm_medium=bio&utm_campaign=linktree&utm_content=formando_campeoes" class="hl feat hl-sm reveal" style="--d: 0.50s;">
+    <span class="hl-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+    <span class="hl-badge">Para o atleta 13+</span>
+    <span class="hl-title">Formando <em>Campeões</em></span>
+    <span class="hl-sub">Formação em turma, por posição. Turma de laterais em andamento.</span>
+    <span class="hl-cta">Conhecer o Formando <span class="arr">›</span></span>
+    <span class="hl-perk">Demais posições em lista de espera</span>
   </a>
 </section>
 
-<!-- FALAR COM O TIME -->
+<div class="divider reveal" style="--d: 0.55s;"></div>
+
 <section class="section">
-  <p class="section-label reveal" style="--d: 0.50s;">Precisa de direção?</p>
+  <p class="section-label reveal" style="--d: 0.60s;">Aprenda no seu ritmo</p>
 
-  <a href="https://wa.me/5551996917344?text=Oi!%20Vim%20pelo%20link%20do%20Instagram%20do%20Base%20de%20Campe%C3%A3o." class="btn btn-help reveal" style="--d: 0.55s;">
-    <span class="btn-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
-      </svg>
-    </span>
-    <span class="btn-text">
-      <span class="btn-title">Falar com o time</span>
-      <span class="btn-sub">Tire suas dúvidas pelo WhatsApp</span>
-    </span>
-    <span class="btn-arrow">›</span>
+  <a href="https://manuais.basedecampeao.com.br/?utm_source=instagram&utm_medium=bio&utm_campaign=linktree&utm_content=manuais" class="hl feat hl-sm reveal" style="--d: 0.65s;">
+    <span class="hl-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>
+    <span class="hl-badge">Manuais do Campeão</span>
+    <span class="hl-title">Comece pelo <em>primeiro passo</em></span>
+    <span class="hl-sub">Guias curtos e diretos, um tema por vez: peneira, alimentação, sono, disciplina e mais.</span>
+    <span class="hl-cta">Ver todos os manuais <span class="arr">›</span></span>
+  </a>
+
+  <a href="https://open.spotify.com/show/6aCYpHF6p1KCCvJJLkv2KS?si=60d5856faa1c4346" class="hl feat hl-sm reveal" style="--d: 0.70s;">
+    <span class="hl-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></span>
+    <span class="hl-badge">Podcast</span>
+    <span class="hl-title">Base de Campeão <em>Podcast</em></span>
+    <span class="hl-sub">Episódios diários de 3 minutos, direto no Spotify.</span>
+    <span class="hl-cta">Ouvir agora <span class="arr">›</span></span>
   </a>
 </section>
 
-<div class="divider reveal" style="--d: 0.59s;"></div>
+<div class="divider reveal" style="--d: 0.75s;"></div>
 
-<!-- EBOOKS & MANUAIS -->
 <section class="section">
-  <p class="section-label reveal" style="--d: 0.64s;">Manuais do Campeão</p>
+  <p class="section-label reveal" style="--d: 0.80s;">Fale com a gente</p>
 
-  <a href="https://desenvolvimento.basedecampeao.com.br/?utm_source=instagram&utm_medium=bio&utm_campaign=linktree&utm_content=manual_fase" class="btn btn-muted reveal" style="--d: 0.68s;">
-    <span class="btn-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M3 20h4v-5H3z"/>
-        <path d="M10 20h4V9h-4z"/>
-        <path d="M17 20h4V4h-4z"/>
-      </svg>
-    </span>
-    <span class="btn-text">
-      <span class="btn-title">Em que fase seu filho está</span>
-      <span class="btn-sub">Manual do Campeão</span>
-    </span>
-    <span class="btn-arrow">›</span>
-  </a>
-
-  <a href="https://peneira.basedecampeao.com.br/?utm_source=instagram&utm_medium=bio&utm_campaign=linktree&utm_content=manual_peneira" class="btn btn-muted reveal" style="--d: 0.72s;">
-    <span class="btn-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="12" cy="12" r="10"/>
-        <circle cx="12" cy="12" r="6"/>
-        <circle cx="12" cy="12" r="2"/>
-      </svg>
-    </span>
-    <span class="btn-text">
-      <span class="btn-title">Como brilhar em uma peneira</span>
-      <span class="btn-sub">O guia do atleta e da família</span>
-    </span>
-    <span class="btn-arrow">›</span>
-  </a>
-
-  <a href="https://go.hotmart.com/W103582992R?dp=1" class="btn btn-muted reveal" style="--d: 0.77s;">
-    <span class="btn-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/>
-        <polyline points="17 6 23 6 23 12"/>
-      </svg>
-    </span>
-    <span class="btn-text">
-      <span class="btn-title">Como se destacar na base</span>
-      <span class="btn-sub">Manual do Campeão</span>
-    </span>
-    <span class="btn-arrow">›</span>
-  </a>
-
-  <a href="https://go.hotmart.com/J103907000J?dp=1" class="btn btn-muted reveal" style="--d: 0.82s;">
-    <span class="btn-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M12 8c-3.2-1.8-6.5.4-6.5 4 0 3.6 2.7 7.7 6.5 7.7s6.5-4.1 6.5-7.7c0-3.6-3.3-5.8-6.5-4z"/>
-        <path d="M12 8c0-2 1.2-3.4 3-4"/>
-      </svg>
-    </span>
-    <span class="btn-text">
-      <span class="btn-title">Alimentação de atleta</span>
-      <span class="btn-sub">Manual do Campeão</span>
-    </span>
-    <span class="btn-arrow">›</span>
-  </a>
-
-  <a href="https://go.hotmart.com/Q102334447X?dp=1" class="btn btn-muted reveal" style="--d: 0.85s;">
-    <span class="btn-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-      </svg>
-    </span>
-    <span class="btn-text">
-      <span class="btn-title">Sono de atleta</span>
-      <span class="btn-sub">Manual do Campeão</span>
-    </span>
-    <span class="btn-arrow">›</span>
-  </a>
-
-  <a href="https://go.hotmart.com/J103892586M?dp=1" class="btn btn-muted reveal" style="--d: 0.85s;">
-    <span class="btn-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M6 7v10"/><path d="M18 7v10"/>
-        <path d="M3 9v6"/><path d="M21 9v6"/>
-        <path d="M6 12h12"/>
-      </svg>
-    </span>
-    <span class="btn-text">
-      <span class="btn-title">Treinar com disciplina</span>
-      <span class="btn-sub">Manual do Campeão</span>
-    </span>
-    <span class="btn-arrow">›</span>
-  </a>
-
-  <a href="https://go.hotmart.com/D103869869N?dp=1" class="btn btn-muted reveal" style="--d: 0.85s;">
-    <span class="btn-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
-        <line x1="12" y1="18" x2="12.01" y2="18"/>
-      </svg>
-    </span>
-    <span class="btn-text">
-      <span class="btn-title">Usar o celular com disciplina</span>
-      <span class="btn-sub">Manual do Campeão</span>
-    </span>
-    <span class="btn-arrow">›</span>
+  <a href="https://wa.me/5551996917344?text=Oi!%20Vim%20pelo%20link%20do%20Instagram%20do%20Base%20de%20Campe%C3%A3o." class="hl feat hl-sm feat-help reveal" style="--d: 0.85s;">
+    <span class="hl-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span>
+    <span class="hl-badge">WhatsApp</span>
+    <span class="hl-title">Falar com o <em>time</em></span>
+    <span class="hl-sub">Tire suas dúvidas pelo WhatsApp com a equipe do Base de Campeão.</span>
+    <span class="hl-cta">Chamar no WhatsApp <span class="arr">›</span></span>
   </a>
 </section>
 
-
-<div class="divider reveal" style="--d: 0.85s;"></div>
-
-<!-- PODCAST -->
-<section class="section">
-  <p class="section-label reveal" style="--d: 0.85s;">Podcast</p>
-
-  <a href="https://open.spotify.com/show/6aCYpHF6p1KCCvJJLkv2KS?si=60d5856faa1c4346" class="btn btn-ghost reveal" style="--d: 0.85s;">
-    <span class="btn-icon">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/>
-        <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
-        <line x1="12" y1="19" x2="12" y2="22"/>
-        <line x1="8" y1="22" x2="16" y2="22"/>
-      </svg>
-    </span>
-    <span class="btn-text">
-      <span class="btn-title">Base de Campeão · Podcast</span>
-      <span class="btn-sub">Episódios diários de 3 min · Spotify</span>
-    </span>
-    <span class="btn-arrow">›</span>
-  </a>
-</section>
-
-<p class="footer reveal" style="--d: 0.85s;">© Base de Campeão · basedecampeao.com.br</p>
+<p class="footer reveal" style="--d: 0.90s;">© Base de Campeão · basedecampeao.com.br</p>
 
 </body>
 </html>

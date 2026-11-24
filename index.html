@@ -3,449 +3,161 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Base de Campeão | Links</title>
-<meta name="description" content="Você realmente entende a formação do seu filho no futebol? Faça o teste e conheça o BDC Scout, a Comunidade de Desenvolvimento, o PDI Ciclo 2027, os manuais e o podcast do Base de Campeão.">
+<title>Base de Campeão | Black November | Links</title>
+<meta name="description" content="Black November no Base de Campeão: Manuais por R$ 37, BDC Scout trimestral por R$ 99, Comunidade anual por R$ 897, PDI com condição especial e Formando Laterais.">
 <meta name="robots" content="index, follow">
-
-<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://link-tree.basedecampeao.com.br/">
-<meta property="og:title" content="Base de Campeão | Links">
-<meta property="og:description" content="Você realmente entende a formação do seu filho no futebol? Faça o teste, conheça o BDC Scout, a Comunidade, o PDI 2027 e os manuais do Base de Campeão.">
-<meta property="og:image" content="https://link-tree.basedecampeao.com.br/og-links.png">
+<meta property="og:title" content="Base de Campeão | Black November">
+<meta property="og:description" content="Comece por aqui: Manuais, BDC Scout, Comunidade, PDI e Formando Laterais.">
+<meta property="og:image" content="https://link-tree.basedecampeao.com.br/og-links-black.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="pt_BR">
-
-<!-- Favicon -->
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<meta name="theme-color" content="#03273e">
-
+<meta name="theme-color" content="#01080F">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=DM+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-  body {
-    background-color: #03273e;
-    background-image: radial-gradient(ellipse 120% 50% at 50% -5%, rgba(219,167,65,0.13) 0%, transparent 60%);
-    font-family: 'DM Sans', sans-serif;
-    min-height: 100vh;
-    padding: 40px 20px 56px;
-    max-width: 480px;
-    margin: 0 auto;
-  }
-
-  /* ── ANIMATIONS ── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(16px); }
-    to   { opacity: 1; transform: translateY(0); }
-  }
-  @keyframes shine {
-    0%   { transform: translateX(-120%) skewX(-18deg); }
-    18%  { transform: translateX(220%) skewX(-18deg); }
-    100% { transform: translateX(220%) skewX(-18deg); }
-  }
-  .reveal {
-    animation: fadeUp 0.6s ease both;
-    animation-delay: var(--d, 0s);
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .reveal { animation: none; }
-    .btn-gold::after { display: none; }
-  }
-
-  /* ── HEADER ── */
-  .header { text-align: center; margin-bottom: 34px; }
-
-  .logo {
-    width: 158px;
-    height: auto;
-    margin-bottom: 14px;
-    filter: drop-shadow(0 8px 28px rgba(0,0,0,0.35));
-  }
-
-  .tagline {
-    font-size: 12px;
-    color: rgba(255,255,255,0.42);
-    letter-spacing: 0.3px;
-    line-height: 1.7;
-  }
-
-  .tagline span {
-    color: rgba(219,167,65,0.55);
-    margin: 0 4px;
-  }
-
-  /* ── SECTION ── */
-  .section { margin-bottom: 26px; }
-
-  .section-label {
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 2.5px;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.3);
-    margin-bottom: 10px;
-    padding-left: 2px;
-  }
-
-  /* ── BUTTONS ── */
-  .btn {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    width: 100%;
-    padding: 16px 18px;
-    margin-bottom: 9px;
-    border-radius: 14px;
-    text-decoration: none;
-    transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
-    -webkit-tap-highlight-color: transparent;
-    position: relative;
-    overflow: hidden;
-  }
-  .btn:active { transform: scale(0.975); }
-
-  .btn-gold {
-    background: linear-gradient(135deg, #e4b04a 0%, #dba741 55%, #c9972b 100%);
-    border: none;
-    box-shadow: 0 6px 24px rgba(219,167,65,0.28);
-  }
-  .btn-gold::after {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 40%; height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.35), transparent);
-    animation: shine 4s ease-in-out infinite;
-    animation-delay: 1.2s;
-    pointer-events: none;
-  }
-  .btn-gold .btn-icon { background: rgba(3,39,62,0.18); color: #03273e; }
-  .btn-gold .btn-title { color: #03273e; }
-  .btn-gold .btn-sub { color: rgba(3,39,62,0.62); }
-  .btn-gold .btn-arrow { color: rgba(3,39,62,0.4); }
-
-  .btn-ghost {
-    background: rgba(255,255,255,0.045);
-    border: 1px solid rgba(219,167,65,0.22);
-  }
-  .btn-ghost:hover { background: rgba(219,167,65,0.07); border-color: rgba(219,167,65,0.45); }
-  .btn-ghost .btn-icon { background: rgba(219,167,65,0.1); color: #dba741; }
-  .btn-ghost .btn-title { color: #fff; }
-  .btn-ghost .btn-sub { color: rgba(255,255,255,0.42); }
-  .btn-ghost .btn-arrow { color: rgba(255,255,255,0.2); }
-
-  .btn-muted {
-    background: rgba(255,255,255,0.028);
-    border: 1px solid rgba(255,255,255,0.08);
-  }
-  .btn-muted:hover { background: rgba(255,255,255,0.055); border-color: rgba(255,255,255,0.14); }
-  .btn-muted .btn-icon { background: rgba(219,167,65,0.07); color: rgba(219,167,65,0.8); }
-  .btn-muted .btn-title { color: rgba(255,255,255,0.85); }
-  .btn-muted .btn-sub { color: rgba(255,255,255,0.35); }
-  .btn-muted .btn-arrow { color: rgba(255,255,255,0.15); }
-
-  .btn-icon {
-    width: 42px; height: 42px;
-    border-radius: 10px;
-    display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0;
-  }
-  .btn-icon svg { width: 21px; height: 21px; }
-
-  .btn-text { flex: 1; min-width: 0; }
-
-  .btn-title {
-    font-family: 'Barlow Condensed', sans-serif;
-    font-size: 17px; font-weight: 700;
-    letter-spacing: 0.4px; text-transform: uppercase; line-height: 1.1;
-    display: block;
-  }
-
-  .btn-sub {
-    font-size: 12px; font-weight: 400;
-    margin-top: 2px;
-    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-    display: block;
-  }
-
-  .btn-arrow { font-size: 20px; flex-shrink: 0; line-height: 1; }
-
-  /* ── HELP BUTTON (destaque) ── */
-  @keyframes pulseGlow {
-    0%, 100% { box-shadow: 0 6px 24px rgba(37,211,102,0.22); }
-    50%      { box-shadow: 0 6px 30px rgba(37,211,102,0.45); }
-  }
-  .btn-help {
-    background: linear-gradient(135deg, #2bd171 0%, #25d366 55%, #1eb958 100%);
-    border: none;
-    animation: pulseGlow 2.6s ease-in-out infinite;
-    margin-bottom: 0;
-  }
-  .btn-help:active { transform: scale(0.975); }
-  .btn-help .btn-icon { background: rgba(255,255,255,0.22); color: #fff; }
-  .btn-help .btn-title { color: #063d1f; }
-  .btn-help .btn-sub { color: rgba(6,61,31,0.68); }
-  .btn-help .btn-arrow { color: rgba(6,61,31,0.5); }
-  @media (prefers-reduced-motion: reduce) {
-    .btn-help { animation: none; }
-  }
-
-  .divider {
-    height: 1px;
-    background: rgba(255,255,255,0.06);
-    margin: 4px 0 26px;
-  }
-
-  .footer {
-    text-align: center;
-    font-size: 11px;
-    color: rgba(255,255,255,0.18);
-    margin-top: 14px;
-    letter-spacing: 0.3px;
-  }
-
-  /* ── CARD EM DESTAQUE ── */
-  @keyframes hlGlow {
-    0%, 100% { box-shadow: 0 10px 34px rgba(219,167,65,0.22), 0 0 0 1px rgba(219,167,65,0.55) inset; }
-    50%      { box-shadow: 0 12px 44px rgba(219,167,65,0.42), 0 0 0 1px rgba(243,195,99,0.9) inset; }
-  }
-  .hl {
-    display: block; position: relative; overflow: hidden; text-decoration: none;
-    border-radius: 20px; padding: 22px 20px 18px; margin-bottom: 12px;
-    background:
-      radial-gradient(ellipse 90% 80% at 100% 0%, rgba(219,167,65,0.28) 0%, transparent 60%),
-      linear-gradient(160deg, #0a3350 0%, #052036 100%);
-    animation: hlGlow 3s ease-in-out infinite;
-    -webkit-tap-highlight-color: transparent;
-    transition: transform 0.15s ease;
-  }
-  .hl:active { transform: scale(0.98); }
-  .hl::after {
-    content: ''; position: absolute; top: 0; left: 0; width: 40%; height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
-    animation: shine 5s ease-in-out infinite; animation-delay: 0.8s; pointer-events: none;
-  }
-  .hl-num {
-    position: absolute; right: -6px; top: -22px;
-    font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 150px; line-height: 1;
-    color: transparent; -webkit-text-stroke: 2px rgba(219,167,65,0.35);
-    pointer-events: none; user-select: none;
-  }
-  .hl-badge {
-    display: inline-flex; align-items: center; gap: 6px;
-    font-size: 10px; font-weight: 600; letter-spacing: 1.8px; text-transform: uppercase;
-    color: #03273e; background: linear-gradient(135deg, #f3c363, #dba741);
-    padding: 5px 10px; border-radius: 999px; margin-bottom: 12px; position: relative;
-  }
-  .hl-title {
-    position: relative; display: block; max-width: 78%;
-    font-family: 'Barlow Condensed', sans-serif; font-weight: 700; text-transform: uppercase;
-    font-size: 30px; line-height: 0.98; letter-spacing: 0.3px; color: #fff;
-  }
-  .hl-title em { font-style: normal; color: #f3c363; }
-  .hl-sub {
-    position: relative; display: block; max-width: 82%;
-    font-size: 13px; color: rgba(255,255,255,0.62); margin: 10px 0 16px; line-height: 1.5;
-  }
-  .hl-cta {
-    position: relative; display: flex; align-items: center; justify-content: space-between; gap: 10px;
-    background: linear-gradient(135deg, #e4b04a 0%, #dba741 55%, #c9972b 100%);
-    color: #03273e; border-radius: 12px; padding: 13px 16px;
-    font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 17px; letter-spacing: 0.4px; text-transform: uppercase;
-  }
-  .hl-cta .arr { font-size: 22px; line-height: 1; }
-  .hl-perk {
-    position: relative; display: flex; align-items: center; justify-content: center; gap: 6px;
-    margin-top: 10px; font-size: 11.5px; color: rgba(243,195,99,0.85);
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .hl, .hl::after { animation: none; }
-  }
-
-  /* ── ECOSSISTEMA (cards em destaque) ── */
-  .feat { margin-bottom: 12px; }
-  .feat .hl-icon {
-    position: absolute; right: -14px; top: -8px; width: 150px; height: 150px;
-    color: transparent; pointer-events: none;
-  }
-  .feat .hl-icon svg { width: 100%; height: 100%; stroke: rgba(219,167,65,0.30); stroke-width: 1.1; fill: none; }
-  .feat-scout {
-    background:
-      radial-gradient(ellipse 90% 80% at 100% 0%, rgba(0,242,254,0.20) 0%, transparent 60%),
-      linear-gradient(160deg, #0a3350 0%, #052036 100%);
-    animation: scoutGlow 3s ease-in-out infinite;
-  }
-  @keyframes scoutGlow {
-    0%, 100% { box-shadow: 0 10px 34px rgba(0,242,254,0.12), 0 0 0 1px rgba(0,242,254,0.45) inset; }
-    50%      { box-shadow: 0 12px 44px rgba(0,242,254,0.26), 0 0 0 1px rgba(122,247,255,0.85) inset; }
-  }
-  .feat-scout .hl-icon svg { stroke: rgba(0,242,254,0.30); }
-  .feat-scout .hl-badge { background: linear-gradient(135deg, #7af7ff, #00d9e6); }
-  .feat-scout .hl-title em { color: #7af7ff; }
-  .feat-scout .hl-cta { background: linear-gradient(135deg, #7af7ff 0%, #00e1ef 55%, #00bfcc 100%); }
-  .feat-scout .hl-perk { color: rgba(122,247,255,0.85); }
-  .feat .hl-title { font-size: 27px; }
-  @media (prefers-reduced-motion: reduce) { .feat-scout { animation: none; } }
-
-  /* ── HERO: COMECE POR AQUI ── */
-  .hl-hero .hl-num { font-size: 190px; right: 4px; top: -38px; -webkit-text-stroke: 2px rgba(219,167,65,0.30); }
-  .hl-hero .hl-title { font-size: 29px; max-width: 88%; line-height: 1.0; }
-  .hl-hero .hl-sub { max-width: 86%; }
-
-  /* ── PDI 2027 (urgência) ── */
-  @keyframes liveDot {
-    0%   { box-shadow: 0 0 0 0 rgba(255,107,107,0.65); }
-    70%  { box-shadow: 0 0 0 8px rgba(255,107,107,0); }
-    100% { box-shadow: 0 0 0 0 rgba(255,107,107,0); }
-  }
-  .btn-live { background: rgba(255,255,255,0.045); border: 1px solid rgba(243,195,99,0.55); margin-bottom: 0; }
-  .btn-live:hover { background: rgba(219,167,65,0.1); border-color: rgba(243,195,99,0.85); }
-  .btn-live .btn-icon { background: linear-gradient(135deg, #f3c363, #dba741); color: #03273e; }
-  .btn-live .btn-title { color: #fff; display: flex; align-items: center; gap: 9px; }
-  .btn-live .btn-sub { color: rgba(255,255,255,0.62); }
-  .btn-live .btn-arrow { color: #dba741; }
-  .live-dot { width: 8px; height: 8px; border-radius: 50%; background: #ff6b6b; display: inline-block; flex-shrink: 0; animation: liveDot 1.6s infinite; }
-  @media (prefers-reduced-motion: reduce) { .live-dot { animation: none; } }
-
-  .section > .btn:last-child { margin-bottom: 0; }
-
-  /* ── TODOS OS BOTÕES NO ESTILO DE DESTAQUE ── */
-  .hl-sm { padding: 18px 18px 16px; animation: none; box-shadow: 0 8px 26px rgba(0,0,0,0.25), 0 0 0 1px rgba(219,167,65,0.38) inset; }
-  .hl-sm::after { animation: none; display: none; }
-  .hl-sm .hl-title, .feat.hl-sm .hl-title { font-size: 24px; }
-  .hl-sm .hl-sub { margin: 8px 0 12px; font-size: 12.5px; }
-  .hl-sm .hl-cta { padding: 11px 14px; font-size: 16px; }
-  .hl-sm .hl-icon { width: 108px; height: 108px; top: -2px; right: -8px; }
-  .hl-badge .live-dot { width: 7px; height: 7px; background: #e5484d; }
-  .feat-help { background: radial-gradient(ellipse 90% 80% at 100% 0%, rgba(37,211,102,0.22) 0%, transparent 60%), linear-gradient(160deg, #0a3350 0%, #052036 100%); box-shadow: 0 8px 26px rgba(0,0,0,0.25), 0 0 0 1px rgba(37,211,102,0.5) inset; }
-  .feat-help .hl-icon svg { stroke: rgba(37,211,102,0.32); }
-  .feat-help .hl-badge { background: linear-gradient(135deg, #6ef0a3, #25d366); color: #063d1f; }
-  .feat-help .hl-title em { color: #6ef0a3; }
-  .feat-help .hl-cta { background: linear-gradient(135deg, #2bd171 0%, #25d366 55%, #1eb958 100%); color: #063d1f; }
-  .section:last-of-type .hl:last-child { margin-bottom: 0; }
-  .hl-cta { white-space: nowrap; }
-  @media (max-width: 380px) { .hl-cta { font-size: 15px; padding: 12px 13px; } .hl-sm .hl-cta { font-size: 15px; } }
-  @media (max-width: 340px) { .hl-cta { font-size: 13.5px; letter-spacing: 0.2px; } .hl-title { font-size: 25px; } .hl-hero .hl-title { font-size: 25px; } }
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--gold:#DBA741;--gl:#F3C363}
+body{background:#01080F;background-image:radial-gradient(ellipse 120% 45% at 50% -8%,rgba(219,167,65,.30) 0,transparent 62%),radial-gradient(ellipse 80% 40% at 100% 60%,rgba(219,167,65,.08) 0,transparent 60%);font-family:'DM Sans',sans-serif;color:#fff;min-height:100vh;padding:0 18px 52px;max-width:480px;margin:0 auto;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+@keyframes up{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes shine{0%{transform:translateX(-130%) skewX(-18deg)}20%,100%{transform:translateX(260%) skewX(-18deg)}}
+@keyframes bar{to{background-position:-220% 0}}
+@keyframes glow{0%,100%{box-shadow:0 12px 36px rgba(219,167,65,.2),0 0 0 1px rgba(219,167,65,.5) inset}50%{box-shadow:0 14px 48px rgba(219,167,65,.42),0 0 0 1px rgba(243,195,99,.95) inset}}
+.reveal{animation:up .6s ease both;animation-delay:var(--d,0s)}
+/* faixa */
+.top{margin:0 -18px 22px;padding:11px 14px;display:flex;align-items:center;justify-content:center;gap:10px;color:#031B2E;font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.4px;white-space:nowrap;background:linear-gradient(100deg,#b9852a,#F3C363 28%,#DBA741 52%,#F3C363 76%,#b9852a);background-size:220% 100%;animation:bar 7s linear infinite;box-shadow:0 6px 26px rgba(219,167,65,.35)}
+.top .tag{background:#031B2E;color:#F3C363;padding:3px 10px;border-radius:6px;font-family:'Barlow Condensed',sans-serif;font-size:16px;letter-spacing:1.6px}
+.top .cd{background:rgba(3,27,46,.15);padding:3px 9px;border-radius:6px;font-variant-numeric:tabular-nums}
+.head{text-align:center;margin-bottom:26px}
+.logo{width:118px;height:auto;margin-bottom:12px;filter:drop-shadow(0 8px 28px rgba(0,0,0,.6))}
+.black{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:54px;line-height:.92;text-transform:uppercase;letter-spacing:1px;background:linear-gradient(135deg,#F3C363,#DBA741 60%,#b9852a);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.head p{font-size:14px;color:rgba(255,255,255,.62);margin-top:10px;line-height:1.55}
+.clock{display:flex;justify-content:center;gap:8px;margin-top:16px}
+.clock span{display:grid;justify-items:center;min-width:60px;padding:8px 6px 6px;border-radius:10px;background:rgba(219,167,65,.08);border:1px solid rgba(219,167,65,.4)}
+.clock b{font-family:'Barlow Condensed',sans-serif;font-size:28px;line-height:1;color:#F3C363;font-variant-numeric:tabular-nums}
+.clock small{font-size:9px;text-transform:uppercase;letter-spacing:.9px;color:rgba(255,255,255,.5);margin-top:3px}
+.clock-lbl{font-size:10px;font-weight:700;letter-spacing:2.2px;text-transform:uppercase;color:rgba(243,195,99,.85);margin-top:18px}
+/* trilha de passos */
+.path{position:relative;padding-left:0}
+.path::before{content:"";position:absolute;left:25px;top:30px;bottom:30px;width:2px;background:linear-gradient(180deg,rgba(219,167,65,.7),rgba(219,167,65,.12));border-radius:2px}
+.step{position:relative;display:flex;gap:14px;align-items:flex-start;text-decoration:none;color:#fff;margin-bottom:14px;padding:18px 16px 16px 12px;border-radius:20px;overflow:hidden;background:radial-gradient(ellipse 90% 80% at 100% 0,rgba(219,167,65,.20) 0,transparent 60%),linear-gradient(160deg,#05121e,#020b14);box-shadow:0 10px 30px rgba(0,0,0,.5),0 0 0 1px rgba(219,167,65,.38) inset;transition:transform .15s}
+.step:active{transform:scale(.98)}
+.step::after{content:"";position:absolute;top:0;left:0;width:40%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.08),transparent);animation:shine 6s ease-in-out infinite;animation-delay:var(--sd,1s);pointer-events:none}
+.step-feat{animation:glow 3s ease-in-out infinite}
+.num{flex:0 0 auto;width:28px;height:28px;border-radius:50%;margin-top:1px;display:grid;place-items:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:17px;color:#031B2E;background:linear-gradient(135deg,#F3C363,#DBA741);box-shadow:0 0 0 4px #01080F,0 0 18px rgba(219,167,65,.5);position:relative;z-index:1}
+.body{display:block;min-width:0;flex:1}
+.kick{display:block;font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#F3C363;margin-bottom:6px}
+.t{display:block;font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;font-size:27px;line-height:1;letter-spacing:.3px}
+.t em{font-style:normal;color:#F3C363}
+.s{display:block;font-size:13px;line-height:1.5;color:rgba(255,255,255,.62);margin:9px 0 12px}
+.pr{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px;margin:0 0 14px}
+.pr b{font-family:'Barlow Condensed',sans-serif;font-size:42px;line-height:1;color:#fff;font-weight:800}
+.pr s{font-size:14px;color:rgba(255,255,255,.4);text-decoration-color:#DBA741;text-decoration-thickness:2px}
+.pr small{font-size:12px;color:#F3C363;font-weight:700}
+.pr-txt b{font-size:25px;color:#F3C363;text-transform:uppercase;letter-spacing:.4px}
+.cta{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:13px 16px;border-radius:12px;background:linear-gradient(135deg,#e4b04a,#dba741 55%,#c9972b);color:#031B2E;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:17px;letter-spacing:.4px;text-transform:uppercase;white-space:nowrap}
+.cta .arr{font-size:22px;line-height:1}
+.more{margin-top:20px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.mini{display:flex;flex-direction:column;gap:3px;text-decoration:none;padding:14px;border-radius:14px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);color:#fff}
+.mini b{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;font-size:17px;letter-spacing:.4px}
+.mini span{font-size:11.5px;color:rgba(255,255,255,.5)}
+.foot{text-align:center;font-size:11px;color:rgba(255,255,255,.25);margin-top:26px}
+@media(max-width:340px){.top{font-size:10.5px;gap:6px}.top .tag{font-size:13px;padding:3px 7px}.clock span{min-width:50px}.clock{gap:5px}.cta{font-size:13.5px;padding:12px 12px;letter-spacing:.2px}.step{padding:16px 12px 14px 8px;gap:10px}}
+@media(max-width:360px){.t{font-size:24px}.pr b{font-size:36px}.cta{font-size:15px}.black{font-size:46px}}
+@media(prefers-reduced-motion:reduce){.reveal,.top,.step,.step::after{animation:none}}
 </style>
 </head>
 <body>
+<div class="top reveal" data-end="2026-11-30T23:59:59-03:00"><span class="tag">BLACK NOVEMBER</span><span class="cd" data-cd>--</span></div>
 
-<header class="header reveal" style="--d: 0.05s;">
-  <img class="logo" src="/logo.png" alt="Base de Campeão | Futebol de base para famílias e atletas">
-  <p class="tagline">
-    Formação
-    <span>→</span>
-    Preparação
-    <span>→</span>
-    Oportunidade
-  </p>
+<header class="head reveal" style="--d:.05s">
+  <img class="logo" src="/logo-256.webp" width="118" height="121" alt="Base de Campeão">
+  <h1 class="black">Comece<br>por aqui</h1>
+  <p>Um passo de cada vez.<br>Escolha onde você está e siga a sequência.</p>
+  <div class="clock-lbl">A Black November termina em</div>
+  <div class="clock" aria-hidden="true"><span data-u="d"><b>00</b><small>dias</small></span><span data-u="h"><b>00</b><small>horas</small></span><span data-u="m"><b>00</b><small>min</small></span><span data-u="s"><b>00</b><small>seg</small></span></div>
 </header>
 
-<!-- COMECE POR AQUI (teste + conteúdo unificados) -->
-<section class="section">
-  <p class="section-label reveal" style="--d: 0.10s;">Comece por aqui</p>
+<main class="path">
+<a href="https://manuais.basedecampeao.com.br/?utm_source=instagram&utm_medium=bio&utm_campaign=linktree_black&utm_content=manuais" style="--sd:1s" class="step" data-evt="manuais">
+      <span class="num" aria-hidden="true">1</span>
+      <span class="body">
+        <span class="kick">Passo 1 · Comece por aqui</span>
+        <span class="t">Manuais do <em>Campeão</em></span>
+        <span class="s">Guias curtos e diretos, um tema por vez.<br>Peneira, alimentação, sono, disciplina e mais.</span>
+        <span class="pr"><b>R$ 37</b><small>na Black November</small></span>
+        <span class="cta">Quero os manuais <span class="arr">›</span></span>
+      </span>
+    </a>
+    <a href="https://bdcscout.basedecampeao.com.br/?utm_source=instagram&utm_medium=bio&utm_campaign=linktree_black&utm_content=scout" style="--sd:2s" class="step" data-evt="scout">
+      <span class="num" aria-hidden="true">2</span>
+      <span class="body">
+        <span class="kick">Passo 2 · Procurando oportunidades?</span>
+        <span class="t">BDC Scout, o <em>LinkedIn da Bola</em></span>
+        <span class="s">Currículo esportivo, registro de jogo, melhores momentos e área de oportunidades.</span>
+        <span class="pr"><s>R$ 137</s><b>R$ 99</b><small>no plano trimestral</small></span>
+        <span class="cta">Quero o Scout <span class="arr">›</span></span>
+      </span>
+    </a>
+    <a href="https://comunidade.basedecampeao.com.br/?utm_source=instagram&utm_medium=bio&utm_campaign=linktree_black&utm_content=comunidade" style="--sd:3s" class="step" data-evt="comunidade">
+      <span class="num" aria-hidden="true">3</span>
+      <span class="body">
+        <span class="kick">Passo 3 · Quer fazer parte da comunidade?</span>
+        <span class="t">Comunidade de <em>Desenvolvimento</em></span>
+        <span class="s">Gestão de carreira em grupo, com a equipe do Base de Campeão perto de você.<br>BDC Scout incluído.</span>
+        <span class="pr"><s>12x R$ 166</s><b>R$ 897</b><small>anual, ou 3x de R$ 299</small></span>
+        <span class="cta">Entrar na Comunidade <span class="arr">›</span></span>
+      </span>
+    </a>
+    <a href="https://pdi.basedecampeao.com.br/?utm_source=instagram&utm_medium=bio&utm_campaign=linktree_black&utm_content=pdi" style="--sd:4s" class="step" data-evt="pdi">
+      <span class="num" aria-hidden="true">4</span>
+      <span class="body">
+        <span class="kick">Passo 4 · Quer um plano individual para o atleta?</span>
+        <span class="t">PDI: um plano para <em>um atleta só</em></span>
+        <span class="s">Gestão de carreira, análise de desempenho e plano de treino individuais.</span>
+        <span class="pr pr-txt"><b>Super condição especial de Black</b></span>
+        <span class="cta">Quero o PDI <span class="arr">›</span></span>
+      </span>
+    </a>
+    <a href="https://formandolaterais.basedecampeao.com.br/?utm_source=instagram&utm_medium=bio&utm_campaign=linktree_black&utm_content=formando" style="--sd:5s" class="step" data-evt="formando">
+      <span class="num" aria-hidden="true">5</span>
+      <span class="body">
+        <span class="kick">Passo 5 · Você é lateral? Quer se desenvolver?</span>
+        <span class="t">Formando <em>Laterais</em></span>
+        <span class="s">Formação em turma para laterais.<br>Turma em andamento.</span>
+        
+        <span class="cta">Quero me desenvolver <span class="arr">›</span></span>
+      </span>
+    </a>
+</main>
 
-  <a href="https://camisa10.basedecampeao.com.br/?utm_source=instagram&utm_medium=bio&utm_campaign=linktree&utm_content=hero_comece_aqui" class="hl hl-hero reveal" style="--d: 0.15s;" aria-label="Você realmente entende a formação do seu filho no futebol? Faça o teste">
-    <span class="hl-num" aria-hidden="true">?</span>
-    <span class="hl-badge">Teste rápido · 10 perguntas</span>
-    <span class="hl-title">Você realmente entende a <em>formação</em> do seu filho no futebol?</span>
-    <span class="hl-sub">Responda e descubra o que você já sabe e o que ainda falta saber.</span>
-    <span class="hl-cta">Fazer o teste agora <span class="arr">›</span></span>
-    <span class="hl-perk">No final, cupom de 50% no primeiro mês da Comunidade</span>
-  </a>
-</section>
+<div class="more">
+  <a class="mini" href="https://wa.me/5551996917344?text=Oi!%20Vim%20pelo%20link%20do%20Instagram%20do%20Base%20de%20Campe%C3%A3o." data-evt="whatsapp"><b>Falar com o time</b><span>WhatsApp</span></a>
+  <a class="mini" href="https://open.spotify.com/show/6aCYpHF6p1KCCvJJLkv2KS?si=60d5856faa1c4346" data-evt="podcast"><b>Podcast</b><span>Episódios diários no Spotify</span></a>
+</div>
+<p class="foot">© Base de Campeão · basedecampeao.com.br</p>
 
-<section class="section">
-  <p class="section-label reveal" style="--d: 0.20s;">Temporada 2027</p>
-
-  <a href="https://pdi2027.basedecampeao.com.br/?utm_source=instagram&utm_medium=bio&utm_campaign=linktree&utm_content=pdi2027" class="hl feat feat-pdi reveal" style="--d: 0.25s;">
-    <span class="hl-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg></span>
-    <span class="hl-badge"><span class="live-dot" aria-hidden="true"></span> Janela aberta agora</span>
-    <span class="hl-title">A temporada 2027 <em>já começou</em></span>
-    <span class="hl-sub">Clubes estão montando os elencos agora. Prepare o atleta antes da virada.</span>
-    <span class="hl-cta">Quero me preparar <span class="arr">›</span></span>
-    <span class="hl-perk">PDI Ciclo 2027 · atletas 14+ · vagas limitadas</span>
-  </a>
-</section>
-
-<div class="divider reveal" style="--d: 0.30s;"></div>
-
-<section class="section">
-  <p class="section-label reveal" style="--d: 0.35s;">Ecossistema Base de Campeão</p>
-
-  <a href="https://bdcscout.basedecampeao.com.br/?utm_source=instagram&utm_medium=bio&utm_campaign=linktree&utm_content=scout" class="hl feat feat-scout reveal" style="--d: 0.40s;" aria-label="BDC Scout, o LinkedIn da Bola">
-    <span class="hl-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><circle cx="8" cy="12" r="2.4"/><path d="M5.2 16.2a3.2 3.2 0 0 1 5.6 0"/><line x1="13.5" y1="10" x2="18.5" y2="10"/><line x1="13.5" y1="13.5" x2="17" y2="13.5"/></svg></span>
-    <span class="hl-badge">BDC Scout · O LinkedIn da Bola</span>
-    <span class="hl-title">Um perfil <em>pronto pra ser visto</em></span>
-    <span class="hl-sub">Currículo esportivo, registro de jogo, melhores momentos e área de oportunidades em um só lugar.</span>
-    <span class="hl-cta">Conhecer o BDC Scout <span class="arr">›</span></span>
-    <span class="hl-perk">Planos a partir de R$ 45,67 por mês</span>
-  </a>
-
-  <a href="https://novobdc.basedecampeao.com.br/comunidade?utm_source=instagram&utm_medium=bio&utm_campaign=linktree&utm_content=comunidade" class="hl feat  reveal" style="--d: 0.45s;" aria-label="Comunidade de Desenvolvimento">
-    <span class="hl-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
-    <span class="hl-badge">Comunidade de Desenvolvimento</span>
-    <span class="hl-title">Gestão de carreira <em>para o novo futebol</em></span>
-    <span class="hl-sub">Saber onde o atleta está, que caminho seguir e com quem seguir. Um ciclo contínuo com a equipe do Base de Campeão perto de você.</span>
-    <span class="hl-cta">Conhecer a Comunidade <span class="arr">›</span></span>
-    <span class="hl-perk">BDC Scout incluído · mensal ou anual</span>
-  </a>
-
-  <a href="https://formandocampeoes.basedecampeao.com.br/?utm_source=instagram&utm_medium=bio&utm_campaign=linktree&utm_content=formando_campeoes" class="hl feat hl-sm reveal" style="--d: 0.50s;">
-    <span class="hl-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
-    <span class="hl-badge">Para o atleta 13+</span>
-    <span class="hl-title">Formando <em>Campeões</em></span>
-    <span class="hl-sub">Formação em turma, por posição. Turma de laterais em andamento.</span>
-    <span class="hl-cta">Conhecer o Formando <span class="arr">›</span></span>
-    <span class="hl-perk">Demais posições em lista de espera</span>
-  </a>
-</section>
-
-<div class="divider reveal" style="--d: 0.55s;"></div>
-
-<section class="section">
-  <p class="section-label reveal" style="--d: 0.60s;">Aprenda no seu ritmo</p>
-
-  <a href="https://manuais.basedecampeao.com.br/?utm_source=instagram&utm_medium=bio&utm_campaign=linktree&utm_content=manuais" class="hl feat hl-sm reveal" style="--d: 0.65s;">
-    <span class="hl-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>
-    <span class="hl-badge">Manuais do Campeão</span>
-    <span class="hl-title">Comece pelo <em>primeiro passo</em></span>
-    <span class="hl-sub">Guias curtos e diretos, um tema por vez: peneira, alimentação, sono, disciplina e mais.</span>
-    <span class="hl-cta">Ver todos os manuais <span class="arr">›</span></span>
-  </a>
-
-  <a href="https://open.spotify.com/show/6aCYpHF6p1KCCvJJLkv2KS?si=60d5856faa1c4346" class="hl feat hl-sm reveal" style="--d: 0.70s;">
-    <span class="hl-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/><line x1="8" y1="23" x2="16" y2="23"/></svg></span>
-    <span class="hl-badge">Podcast</span>
-    <span class="hl-title">Base de Campeão <em>Podcast</em></span>
-    <span class="hl-sub">Episódios diários de 3 minutos, direto no Spotify.</span>
-    <span class="hl-cta">Ouvir agora <span class="arr">›</span></span>
-  </a>
-</section>
-
-<div class="divider reveal" style="--d: 0.75s;"></div>
-
-<section class="section">
-  <p class="section-label reveal" style="--d: 0.80s;">Fale com a gente</p>
-
-  <a href="https://wa.me/5551996917344?text=Oi!%20Vim%20pelo%20link%20do%20Instagram%20do%20Base%20de%20Campe%C3%A3o." class="hl feat hl-sm feat-help reveal" style="--d: 0.85s;">
-    <span class="hl-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span>
-    <span class="hl-badge">WhatsApp</span>
-    <span class="hl-title">Falar com o <em>time</em></span>
-    <span class="hl-sub">Tire suas dúvidas pelo WhatsApp com a equipe do Base de Campeão.</span>
-    <span class="hl-cta">Chamar no WhatsApp <span class="arr">›</span></span>
-  </a>
-</section>
-
-<p class="footer reveal" style="--d: 0.90s;">© Base de Campeão · basedecampeao.com.br</p>
-
+<script>
+window.dataLayer=window.dataLayer||[];
+(function(){
+  var end=new Date(document.querySelector('.top').getAttribute('data-end')).getTime();
+  var cd=document.querySelector('[data-cd]'),cl=document.querySelectorAll('.clock [data-u]');
+  function p(n){return n<10?'0'+n:''+n}
+  function tick(){var ms=end-Date.now();
+    if(!(ms>0)){cd.textContent='Encerrada';document.querySelector('.clock').style.display='none';document.querySelector('.clock-lbl').style.display='none';return false}
+    var s=Math.floor(ms/1000),d=Math.floor(s/86400),h=Math.floor(s%86400/3600),m=Math.floor(s%3600/60),x=s%60;
+    cd.textContent=(d>0?d+'d ':'')+p(h)+'h '+p(m)+'m '+p(x)+'s';
+    var v={d:p(d),h:p(h),m:p(m),s:p(x)};cl.forEach(function(e){e.querySelector('b').textContent=v[e.getAttribute('data-u')]});return true}
+  if(tick()){var t=setInterval(function(){if(!tick())clearInterval(t)},1000)}
+  document.querySelectorAll('[data-evt]').forEach(function(a){a.addEventListener('click',function(){dataLayer.push({event:'cta_click',origem:'linktree_black',cta:a.getAttribute('data-evt')})})});
+})();
+</script>
 </body>
 </html>
